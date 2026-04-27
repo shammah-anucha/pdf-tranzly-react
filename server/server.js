@@ -11,7 +11,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://pdf-tranzly-react.vercel.app",
+      "https://pdftranzly.com",
     ],
   })
 );
