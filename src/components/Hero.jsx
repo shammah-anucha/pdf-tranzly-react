@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const [isNarrow, setIsNarrow] = useState(window.innerWidth < 600);
+  const [isNarrow, setIsNarrow] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
       setIsNarrow(window.innerWidth < 600);
     };
+
+    handleResize();
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
@@ -19,7 +21,8 @@ export default function Hero() {
       </h1>
 
       <p className="hero-subtitle">
-        Break language barriers in just a few clicks
+        Translate PDF documents from one language to another for free — fast,
+        simple, and online.
       </p>
     </section>
   );
